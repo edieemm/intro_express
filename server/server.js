@@ -5,9 +5,8 @@ const bodyParser = require('body-parser')
 
 //globals
 const port = 5000;
-let things = [];
+let employees = [];
 //test data
-things.push( { name: 'bottle' } );
 
 //uses
 app.use(express.static('server/public')); // telling it where to find index.html
@@ -20,13 +19,13 @@ app.listen(port, () => {
 
 //routes
     //get request
-app.get('/things', (req, res) => { // request, response
-    console.log('in /things GET');
-    res.send(things)
+app.get('/employees', (req, res) => { // request, response
+    console.log('in /employees GET');
+    res.send(employees)
 })
     //post request
-app.post('/things', (req, res) => {
-    console.log('in /things POST:', req.body) //body undefined if you haven't installed body-parser
-    things.push(req.body)
+app.post('/employees', (req, res) => {
+    console.log('in /employees POST:', req.body) //body undefined if you haven't installed body-parser
+    employees.push(req.body)
     res.send('woof')
 })
