@@ -1,0 +1,24 @@
+{
+  "name": "intro_express",
+  "version": "1.0.0",
+  "description": "npm init --yes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edieemm/intro_express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edieemm/intro_express/issues"
+  },
+  "homepage": "https://github.com/edieemm/intro_express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
