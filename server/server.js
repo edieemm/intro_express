@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 //globals
 const port = 5000;
-let employees = [];
+let things = [];
 //test data
 
 //uses
@@ -19,13 +19,13 @@ app.listen(port, () => {
 
 //routes
     //get request
-app.get('/employees', (req, res) => { // request, response
-    console.log('in /employees GET');
-    res.send(employees)
+app.get('/things', (req, res) => { // request, response
+    console.log('in /things GET');
+    res.send(things)
 })
     //post request
-app.post('/employees', (req, res) => {
-    console.log('in /employees POST:', req.body) //body undefined if you haven't installed body-parser
-    employees.push(req.body)
-    res.send('woof')
+app.post('/things', (req, res) => {
+    console.log('in /things POST:', req.body) //body undefined if you haven't installed body-parser
+    things.push(req.body)
+    res.sendStatus(200)
 })
